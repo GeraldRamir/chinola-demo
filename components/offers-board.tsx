@@ -52,7 +52,7 @@ export function OffersBoard() {
               </FilterButton>
               {offerDiscounts.map((item) => (
                 <FilterButton key={item} pressed={discount === item} onClick={() => setDiscount(item)}>
-                  {item}%
+                  {`${item}%`}
                 </FilterButton>
               ))}
             </div>
