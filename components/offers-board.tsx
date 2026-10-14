@@ -82,7 +82,7 @@ export function OffersBoard() {
                         −{item.discount}%
                       </span>
                       {item.memberOnly ? (
-                        <span className="absolute top-3 right-3 bg-black px-2 py-1 text-[10px] font-semibold tracking-[0.12em] text-white uppercase">
+                        <span className="absolute top-3 right-3 max-w-[46%] bg-black px-2 py-1 text-center text-[10px] leading-tight font-semibold tracking-[0.12em] text-white uppercase">
                           Exclusivo miembros
                         </span>
                       ) : null}

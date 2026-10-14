@@ -157,6 +157,10 @@
   animation: hero-slice 0.95s cubic-bezier(0.7, 0, 0.2, 1) 0.28s both;
 }
 
+.hero-figure {
+  transform: translateX(-58%);
+}
+
 .hero-nav,
 .hero-sides,
 .hero-sides-late,

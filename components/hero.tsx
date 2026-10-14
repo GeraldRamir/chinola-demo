@@ -62,21 +62,21 @@ export function Hero() {
 
   return (
     <>
-      <section aria-label="Chinola" className="relative h-[100svh] min-h-[680px] overflow-hidden bg-white">
+      <section aria-label="Chinola" className="relative flow-root overflow-x-clip bg-white lg:block lg:h-[100svh] lg:min-h-[680px] lg:overflow-hidden">
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute top-[4.5rem] right-0 bottom-0 left-[58%] z-0"
+          className="pointer-events-none absolute top-[4.5rem] right-0 left-[58%] z-0 h-[calc(78svh-4.5rem)] lg:bottom-0 lg:h-auto"
           style={{ background: "linear-gradient(to bottom, #FBC056 0%, #FB5D2E 42%, #E65A7F 100%)" }}
         />
 
         <header
           className={`hero-nav fixed inset-x-0 top-0 z-30 px-4 py-3 transition-[background-color] duration-300 sm:px-8 ${scrolled ? "bg-white/95 backdrop-blur-sm" : ""}`}
         >
-          <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-4">
-            <div className="flex items-center gap-6">
+          <div className="grid grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-2 sm:gap-4 lg:grid-cols-[1fr_auto_1fr]">
+            <div className="flex items-center gap-3 lg:gap-6">
               <button
                 type="button"
-                className="text-[11px] font-semibold tracking-[0.16em] uppercase lg:hidden"
+                className="text-[10px] font-semibold tracking-[0.14em] uppercase sm:text-[11px] sm:tracking-[0.16em] lg:hidden"
                 aria-expanded={menuOpen}
                 onClick={() => {
                   setMenuOpen((open) => !open);
@@ -104,7 +104,7 @@ export function Hero() {
               <ChinolaLogo />
             </a>
 
-            <div className="flex items-center justify-end gap-5">
+            <div className="flex items-center justify-end gap-3 lg:gap-5">
               <nav className="hidden items-center gap-6 lg:flex" aria-label="Más secciones">
                 {navRight.map((item) => (
                   <a
@@ -119,7 +119,7 @@ export function Hero() {
               </nav>
               <button
                 type="button"
-                className="text-[11px] font-semibold tracking-[0.16em] uppercase"
+                className="text-[10px] font-semibold tracking-[0.12em] uppercase sm:text-[11px] sm:tracking-[0.16em]"
                 aria-expanded={searchOpen}
                 onClick={() => {
                   setSearchOpen((open) => !open);
@@ -131,7 +131,7 @@ export function Hero() {
               </button>
               <button
                 type="button"
-                className="text-[11px] font-semibold tracking-[0.16em] uppercase"
+                className="text-[10px] font-semibold tracking-[0.12em] uppercase sm:text-[11px] sm:tracking-[0.16em]"
                 aria-expanded={bagOpen}
                 onClick={() => {
                   setBagOpen((open) => !open);
@@ -148,7 +148,7 @@ export function Hero() {
 
         {menuOpen ? (
           <nav
-            className="fixed top-[4.6rem] left-4 z-40 min-w-44 bg-white p-4 text-sm shadow-sm sm:left-8 lg:hidden"
+            className="fixed top-[4.6rem] right-4 left-4 z-40 bg-white p-4 text-sm shadow-sm sm:right-auto sm:left-8 sm:min-w-44 lg:hidden"
             aria-label="Menú"
           >
             <ul className="space-y-3">
@@ -165,7 +165,7 @@ export function Hero() {
 
         {searchOpen ? (
           <form
-            className="fixed top-[4.6rem] right-5 z-40 bg-white px-3 py-2 shadow-sm sm:right-8"
+            className="fixed top-[4.6rem] right-4 left-4 z-40 bg-white px-3 py-2 shadow-sm sm:left-auto sm:right-8"
             onSubmit={(event) => event.preventDefault()}
           >
             <label htmlFor="hero-search" className="sr-only">
@@ -176,7 +176,7 @@ export function Hero() {
               value={query}
               onChange={(event) => setQuery(event.target.value)}
               placeholder="Buscar"
-              className="w-44 bg-transparent text-sm outline-none"
+              className="w-full bg-transparent text-sm outline-none sm:w-44"
               autoFocus
             />
           </form>
@@ -188,7 +188,7 @@ export function Hero() {
           </p>
         ) : null}
 
-        <div className="hero-sides absolute top-[20%] left-[4%] z-10 w-[min(30vw,22rem)]">
+        <div className="hero-sides relative z-10 mt-[78svh] w-full px-5 pt-8 lg:absolute lg:top-[20%] lg:left-[4%] lg:mt-0 lg:w-[min(30vw,22rem)] lg:px-0 lg:pt-0">
           <p className="font-display text-[clamp(2.8rem,4.6vw,4.6rem)] leading-[0.8] tracking-[-0.045em]">CHINOLA</p>
           <div className="mt-8 flex items-center gap-5">
             <span className="relative grid h-[4.6rem] w-[4.6rem] shrink-0 place-items-center" aria-hidden="true">
@@ -203,10 +203,7 @@ export function Hero() {
           </div>
         </div>
 
-        <div
-          className="absolute top-[4.5rem] left-1/2 z-10 h-[calc(100%-4.5rem)] w-[min(92vw,760px)]"
-          style={{ transform: "translateX(-58%)" }}
-        >
+        <div className="hero-figure absolute top-[4.5rem] left-1/2 z-10 h-[calc(78svh-4.5rem)] w-[175vw] lg:h-[calc(100%-4.5rem)] lg:w-[min(92vw,760px)]">
           <svg
             viewBox="0 0 1000 1472"
             preserveAspectRatio="xMidYMin meet"
@@ -312,14 +309,14 @@ export function Hero() {
           </svg>
         </div>
 
-        <div className="hero-sides-late absolute top-[30%] right-6 z-10 w-[min(28vw,24rem)]">
-          <h1 className="font-display text-[clamp(2rem,3.1vw,3.35rem)] leading-[0.82] tracking-[-0.045em]">
-            <span className="block whitespace-nowrap">WHERE GLAM</span>
-            <span className="block whitespace-nowrap">MEETS GRUNGE</span>
+        <div className="hero-sides-late relative z-10 w-full px-5 pt-8 pb-12 lg:absolute lg:top-[30%] lg:right-6 lg:w-[min(28vw,24rem)] lg:px-0 lg:pt-0 lg:pb-0">
+          <h1 className="font-display text-[clamp(2rem,8vw,3.35rem)] leading-[0.82] tracking-[-0.045em] lg:text-[clamp(2rem,3.1vw,3.35rem)]">
+            <span className="block lg:whitespace-nowrap">WHERE GLAM</span>
+            <span className="block lg:whitespace-nowrap">MEETS GRUNGE</span>
           </h1>
           <a
             href="/ofertas"
-            className="group mt-6 block w-[17.5rem] overflow-hidden bg-[#FBC056] text-black shadow-[0_18px_40px_rgba(0,0,0,0.12)] transition duration-500 ease-out hover:-translate-y-1 hover:bg-[#f3b43a]"
+            className="group mt-6 block w-full overflow-hidden bg-[#FBC056] text-black shadow-[0_18px_40px_rgba(0,0,0,0.12)] transition duration-500 ease-out hover:-translate-y-1 hover:bg-[#f3b43a] lg:w-[17.5rem]"
           >
             <span className="flex items-end justify-between gap-4 px-4 pt-4">
               <span>

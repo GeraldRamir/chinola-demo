@@ -133,17 +133,17 @@ export function NewArrivals() {
         if (!drag.current.down) setHot(false);
       }}
     >
-      <div className="relative mb-8 flex items-end justify-between gap-6">
-        <div>
+      <div className="relative mb-8 flex flex-wrap items-end justify-between gap-4">
+        <div className="min-w-0">
           <p className="text-[11px] font-semibold tracking-[0.22em] text-[#E65A7F] uppercase">Cápsula Quarpa</p>
-          <h2 className="font-display mt-2 text-[clamp(2rem,4vw,3.4rem)] leading-none tracking-[-0.04em]">
+          <h2 className="font-display mt-2 text-[clamp(1.7rem,7vw,3.4rem)] leading-none tracking-[-0.04em]">
             02. New Arrivals
           </h2>
         </div>
         <div className="flex items-end gap-3 sm:gap-5">
-          <PalmLeaf className="tropic-drift-late h-16 w-12 sm:h-20 sm:w-14" />
-          <Hibiscus className="tropic-drift h-20 w-20 sm:h-24 sm:w-24" />
-          <p className="pb-2 text-[11px] font-semibold tracking-[0.18em]">[ DRAG CLICK ]</p>
+          <PalmLeaf className="tropic-drift-late h-12 w-9 sm:h-20 sm:w-14" />
+          <Hibiscus className="tropic-drift h-14 w-14 sm:h-24 sm:w-24" />
+          <p className="hidden pb-2 text-[11px] font-semibold tracking-[0.18em] sm:block">[ DRAG CLICK ]</p>
         </div>
       </div>
       <ul
@@ -368,9 +368,9 @@ export function Stories() {
 
           <ul className="grid grid-cols-3 border-t border-black/15">
             {streetNotes.map(([index, label]) => (
-              <li key={index} className="border-r border-black/15 px-3 py-4 first:pl-0 last:border-r-0">
+              <li key={index} className="border-r border-black/15 px-2 py-4 first:pl-0 last:border-r-0 sm:px-3">
                 <span className="text-[10px] font-semibold tracking-[0.18em] text-black/45">{index}</span>
-                <p className="font-display mt-2 text-[clamp(1rem,1.6vw,1.45rem)] leading-none tracking-[-0.04em] uppercase">
+                <p className="font-display mt-2 text-[clamp(0.78rem,3.1vw,1.45rem)] leading-[0.9] tracking-[-0.04em] uppercase">
                   {label}
                 </p>
               </li>

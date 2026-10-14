@@ -34,15 +34,15 @@ function Flower({ className }: { className?: string }) {
 export function ChinolaLogo({ className = "" }: { className?: string }) {
   return (
     <span className={`inline-flex flex-col items-center text-ink ${className}`}>
-      <span className="font-logo flex items-center text-[1.55rem] leading-none font-medium tracking-[0.22em] sm:text-[1.7rem]">
+      <span className="font-logo flex items-center text-[1.05rem] leading-none font-medium tracking-[0.1em] min-[420px]:text-[1.28rem] min-[420px]:tracking-[0.16em] sm:text-[1.7rem] sm:tracking-[0.22em]">
         <span>CHIN</span>
         <Flower className="mx-[0.08em] h-[0.82em] w-[0.82em]" />
         <span>LA</span>
       </span>
-      <span className="mt-[0.28em] flex items-center gap-2 text-[8px] tracking-[0.28em] uppercase">
-        <span className="h-px w-5 bg-current" />
+      <span className="mt-[0.28em] flex items-center gap-1.5 text-[6px] tracking-[0.14em] uppercase min-[420px]:gap-2 min-[420px]:text-[8px] min-[420px]:tracking-[0.22em] sm:tracking-[0.28em]">
+        <span className="h-px w-3 bg-current min-[420px]:w-5" />
         Moda femenina
-        <span className="h-px w-5 bg-current" />
+        <span className="h-px w-3 bg-current min-[420px]:w-5" />
       </span>
     </span>
   );

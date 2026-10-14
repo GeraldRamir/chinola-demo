@@ -24,19 +24,19 @@ export default function OfertasPage() {
         <div className="offer-rise">
           <p className="text-[11px] font-semibold tracking-[0.22em] uppercase">Chinola · cápsula</p>
           <div className="mt-4 flex flex-wrap items-end justify-between gap-8">
-            <h1 className="font-display text-[clamp(3.6rem,9vw,7.2rem)] leading-[0.8] tracking-[-0.05em]">OFERTAS</h1>
-            <dl className="offer-rise-late grid grid-cols-3 gap-6 pb-1">
+            <h1 className="font-display text-[clamp(2.8rem,14vw,7.2rem)] leading-[0.8] tracking-[-0.05em]">OFERTAS</h1>
+            <dl className="offer-rise-late grid w-full grid-cols-3 gap-3 pb-1 sm:w-auto sm:gap-6">
               <div>
                 <dt className="text-[10px] tracking-[0.16em] uppercase">Hasta</dt>
-                <dd className="font-display mt-1 text-[1.6rem] leading-none">−40%</dd>
+                <dd className="font-display mt-1 text-[1.25rem] leading-none sm:text-[1.6rem]">−40%</dd>
               </div>
               <div>
                 <dt className="text-[10px] tracking-[0.16em] uppercase">Miembros</dt>
-                <dd className="font-display mt-1 text-[1.6rem] leading-none">Etapa 1</dd>
+                <dd className="font-display mt-1 text-[1.25rem] leading-none sm:text-[1.6rem]">Etapa 1</dd>
               </div>
               <div>
                 <dt className="text-[10px] tracking-[0.16em] uppercase">Piezas</dt>
-                <dd className="font-display mt-1 text-[1.6rem] leading-none">09</dd>
+                <dd className="font-display mt-1 text-[1.25rem] leading-none sm:text-[1.6rem]">09</dd>
               </div>
             </dl>
           </div>
